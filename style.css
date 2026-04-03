@@ -109,16 +109,3 @@ h1 {
     z-index: 2000;
     pointer-events: none;
 }
-
-.recognized-shape {
-  animation: shapeRecognitionEffect 1s ease-in-out;
-}
-
-@keyframes shapeRecognitionEffect {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
