@@ -1,4 +1,15 @@
-.shape-overlay {
-  /* Removed transition property */
-  /* other existing styles */
-}
+body { margin: 0; padding: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: Arial, sans-serif; background-image: url("my_images/background.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; }
+h1 { margin-top: 0; margin-bottom: 20px; color: #333; }
+#webcam-container { display: none; }
+#image-display { width: 90vw; height: 80vh; display: flex; justify-content: center; align-items: center; }
+#image-display img { max-width: 100%; max-height: 100%; object-fit: contain; }
+#image-display { position: relative; }
+#image-display .base-img { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; }
+#image-display .overlay-img { position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; max-width: 40%; max-height: 40%; object-fit: contain; }
+#image-display .shape-overlay { position: absolute; pointer-events: none; transform: translate(-50%, -50%); max-width: 22%; max-height: 22%; object-fit: contain; opacity: 0.25; }
+#image-display .shape-Cirkel { top: 64%; left: 30%; }
+#image-display .shape-Vierkant { top: 64%; left: 50%; }
+#image-display .shape-Driehoek { display: none; }
+#image-display .shape-Ster { top: 64%; left: 70%; }
+#prediction { position: fixed; bottom: 0; left: 0; width: 100%; background-color: black; color: white; font-size: 18px; font-weight: bold; text-align: center; z-index: 1000; padding: 10px 0; }
+#prompt { position: fixed; top: 78vh; left: 50%; transform: translateX(-50%); font-family: 'Bangers', cursive; font-size: 36px; color: #fffb66; text-shadow: 3px 3px 0 rgba(0,0,0,0.8), -2px -2px 0 rgba(0,0,0,0.6); padding: 0; z-index: 2000; pointer-events: none; }
